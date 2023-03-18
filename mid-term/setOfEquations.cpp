@@ -136,7 +136,7 @@ void setOfEquations::cramer() {
 void setOfEquations::gaussSeidel() {
     vector<double> x0 (n, 0);
     ans.resize(n);
-    while (count <= 1000) {
+    while (count < 1000) {
         for (int i = 0; i < n; ++i) {
             double val = 0;
             for (int j = 0; j < i; ++j) {
@@ -150,15 +150,14 @@ void setOfEquations::gaussSeidel() {
         }
         ++count;
 
-        double num = 0, den = 0;
+        double num = 0;
         for (int i = 0; i < n; ++i) {
             num = max(num, abs(ans[i] - x0[i]));
-            den = max(den, abs(ans[i]));
         }
-        if (num / den < TOL) {
+        if (num < TOL) {
             break;
         }
-
+     
         for (int i = 0; i < n; ++i) {
             x0[i] = ans[i];
         }
@@ -180,21 +179,18 @@ void setOfEquations::jacobi() {
         }
         ++count;
 
-        double num = 0, den = 0;
+        double num = 0;
         for (int i = 0; i < n; ++i) {
             num = max(num, abs(ans[i] - x0[i]));
-            den = max(den, abs(ans[i]));
         }
-        cout << num / den << " " << TOL << '\n';
-        if (num / den < TOL) {
+        if (num < TOL) {
             break;
         }
         
         for (int i = 0; i < n; ++i) {
             x0[i] = ans[i];
-            cout << ans[i] << " ";
+     
         }
-        cout << '\n';
     }
 }
 
