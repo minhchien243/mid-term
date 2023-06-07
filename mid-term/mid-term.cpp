@@ -2,6 +2,7 @@
 #include "setOfEquations.h"
 #include "polynomial.h"
 #include "spline.h"
+#include "gpt.h"
 
 using namespace std;
 
@@ -77,13 +78,25 @@ void polynomial() {
 }
 
 void spline() {
-    int choice; cin >> choice;
+    spline::running()->setter();
+    spline::running()->solveSpline();
+    spline::running()->getter();
 }
+
+void gpt() {
+    gpt::running()->setter();
+    gpt::running()->newton();
+    gpt::running()->getter();
+}
+
 
 int main()
 {
     bool run = true;
 
+    gpt();
+
+    /*
     while (run) {
         cout << "1->setOfEquations          2->polynomial       3->spline       0->quit\n";
         int choice; cin >> choice;
@@ -104,7 +117,8 @@ int main()
                 break;
         }
     }
-  return 0;
+    */
+    return 0;
 }
 /*
 2 2 5 

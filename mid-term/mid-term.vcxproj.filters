@@ -27,6 +27,12 @@
     <ClCompile Include="spline.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="gpt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bptt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="setOfEquations.h">
@@ -39,6 +45,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="spline.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gpt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bptt.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

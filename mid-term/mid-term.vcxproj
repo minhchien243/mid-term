@@ -127,13 +127,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="bptt.cpp" />
+    <ClCompile Include="gpt.cpp" />
     <ClCompile Include="mid-term.cpp" />
     <ClCompile Include="polynomial.cpp" />
     <ClCompile Include="setOfEquations.cpp" />
     <ClCompile Include="spline.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="bptt.h" />
     <ClInclude Include="general.h" />
+    <ClInclude Include="gpt.h" />
     <ClInclude Include="polynomial.h" />
     <ClInclude Include="setOfEquations.h" />
     <ClInclude Include="spline.h" />
